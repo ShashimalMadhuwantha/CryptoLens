@@ -1,6 +1,5 @@
 const params = new URLSearchParams(window.location.search);
 const cryptoId = params.get("id");
-
 async function fetchCryptoDetails() {
     try {
         if (!cryptoId) {
@@ -18,6 +17,18 @@ async function fetchCryptoDetails() {
 
         // Display crypto name
         document.getElementById("cryptoName").textContent = data.name;
+
+        // Display symbol
+        document.getElementById("cryptoSymbol").textContent = data.symbol.toUpperCase();
+
+        // Display current price
+        document.getElementById("cryptoPrice").textContent = `$${data.market_data.current_price.usd.toFixed(2)}`;
+
+        // Display market cap
+        document.getElementById("cryptoMarketCap").textContent = `$${data.market_data.market_cap.usd.toLocaleString()}`;
+
+        // Display total volume
+        document.getElementById("cryptoVolume").textContent = `$${data.market_data.total_volume.usd.toLocaleString()}`;
 
         // Generate chart data
         const prices = data.market_data.sparkline_7d?.price || [];
@@ -41,20 +52,11 @@ async function fetchCryptoDetails() {
             });
         }
 
-        // Display additional details
-        const detailsHTML = `
-            <p><strong>Symbol:</strong> ${data.symbol.toUpperCase()}</p>
-            <p><strong>Current Price:</strong> $${data.market_data.current_price.usd}</p>
-            <p><strong>Market Cap:</strong> $${data.market_data.market_cap.usd.toLocaleString()}</p>
-            <p><strong>Total Volume:</strong> $${data.market_data.total_volume.usd.toLocaleString()}</p>
-        `;
-        document.getElementById("cryptoDetails").innerHTML = detailsHTML;
-
     } catch (error) {
         console.error("Error fetching crypto details:", error);
-        document.getElementById("cryptoDetails").innerHTML = "<p class='text-danger'>Failed to load cryptocurrency details. Please try again later.</p>";
+        document.getElementById("cryptoDetails").innerHTML = "<p class='text-danger'>Failed to load cryptocurrency details.</p>";
     }
 }
 
-// Fetch and display the crypto details
-fetchCryptoDetails();
+// Initialize fetching crypto details on page load
+document.addEventListener("DOMContentLoaded", fetchCryptoDetails);
