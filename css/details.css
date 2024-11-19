@@ -1,0 +1,137 @@
+/* General Body and Layout Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+/* Navbar Customization */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #ffd700; /* Golden color on hover */
+}
+
+/* Title for Cryptocurrency */
+#cryptoName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Chart Styling */
+#priceChart {
+    max-width: 100%;
+    height: 400px;
+}
+
+/* Crypto Details Section */
+#cryptoDetails {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cryptoDetails h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+#cryptoDetails p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Cards for Crypto Details */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6c757d;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #495057;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #cryptoName {
+        font-size: 1.5rem;
+    }
+
+    #cryptoDetails {
+        padding: 15px;
+    }
+
+    #priceChart {
+        height: 300px;
+    }
+
+    .theme-toggle {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    #cryptoName {
+        font-size: 1.25rem;
+    }
+
+    #priceChart {
+        height: 250px;
+    }
+}
