@@ -3,6 +3,20 @@ body {
     background-color: #f8f9fa;
 }
 
+.navbar {
+    background-color: #343a40 !important;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: #007bff;
+}
+
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -30,4 +44,39 @@ body {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* Custom Styling for Active Nav Link */
+.navbar-nav .nav-item.active .nav-link {
+    color: #007bff; /* Blue color when active */
+}
+
+/* For the Crypto News Page */
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.news-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.news-item img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
