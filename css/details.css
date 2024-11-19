@@ -1,25 +1,15 @@
 /* General Body and Layout Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    color: #495057;
-}
-
-/* Navbar Customization */
-.navbar {
-    margin-bottom: 20px;
 }
 
 .navbar-brand {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
 }
 
-.navbar-brand:hover {
-    color: #ffd700; /* Golden color on hover */
-}
+
 
 /* Title for Cryptocurrency */
 #cryptoName {
